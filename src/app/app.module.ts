@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Add material
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatTableModule } from  '@angular/material';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './core/authentication/authentication.service';
 
 @NgModule({
   imports:      [ 
@@ -25,6 +26,7 @@ import { LoginComponent } from './login/login.component';
       MatTableModule,
   ],
   declarations: [ AppComponent, HelloComponent, LoginComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [AuthenticationService]
 })
 export class AppModule { }

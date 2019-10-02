@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Trial App</h1>
+
+    <!-- <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/mat-count'"> Accounts </a>
+      <a mat-button [routerLink]="'/mat-count'"> Create Account </a>
+      <a mat-button [routerLink]="'/mat-count'"> Contacts </a>
+      <a mat-button [routerLink]="'/mat-count'"> Create Contact </a>
+      <a mat-button [routerLink]="'/mat-count'"> Activities </a>
+      <a mat-button [routerLink]="'/mat-count'"> Create Activity </a>
+
+    </div> -->
+  </mat-toolbar-row>
+
+  <!-- <mat-toolbar-row>
+      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+    </mat-toolbar-row> -->
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/operation'"> Operation </a>
+      <a mat-list-item [routerLink]="'/mat-count'"> Report </a>
+      <a mat-list-item [routerLink]="'/mat-count'"> Data Import </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <!-- <router-outlet></router-outlet> -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-message></app-message>
+<footer color="primary">
+  &copy; 2019 Nattapon Worasakdapisan All Rights Reserved
+</footer>
